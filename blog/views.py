@@ -1,12 +1,21 @@
-from django.shortcuts import render
+# from django.shortcuts import render
+from django.views.generic.list import ListView
+from blog.models import Blog
 
-# Create your views here.
 
+class BlogListView(ListView):
+    """
+    Insert Doc String Here
+    """
 
-def home_view(request):
-    """home view test"""
+    template_name = 'blog/home.html'
+    model = Blog
 
-    context = {
-        'page_title': 'HOME',
-    }
-    return render(request, 'blog/home.html', context)
+    def get_context_data(self, **kwargs):
+        articles = Blog.objects.filter(published_status='Pub').order_by('-date_created')
+        context = super(BlogListView, self).get_context_data(**kwargs)
+        context['page_title'] = 'jeffreytorres.info'
+        context['articles'] = articles
+        return context
+
+        

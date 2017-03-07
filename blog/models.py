@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 from django.conf import settings
+from aboutme.models import Profile
 # from django.utils.text import slugify
 
 
@@ -10,6 +11,12 @@ class Blog(models.Model):
     """
     This model establishes the structure of the blog article for jt_portfolio.
     """
+
+    profile = models.ForeignKey(
+        Profile,
+        on_delete=models.CASCADE,
+        related_name='blog',
+    )
 
     PRIVATE, SHARED, PUBLIC = 'Pri', 'Shr', 'Pub'
 
