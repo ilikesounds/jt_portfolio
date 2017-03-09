@@ -8,7 +8,7 @@ class BlogListView(ListView):
     Insert Doc String Here
     """
 
-    template_name = 'blog/home.html'
+    template_name = 'blog/blog.html'
     model = Blog
 
     def get_context_data(self, **kwargs):
@@ -17,5 +17,3 @@ class BlogListView(ListView):
         context['page_title'] = 'jeffreytorres.info'
         context['articles'] = articles
         return context
-
-        

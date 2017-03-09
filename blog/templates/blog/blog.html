@@ -1,12 +1,23 @@
-<!DOCTYPE html>
-{% load static %}
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <div style="display:none">
-        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
-    </div>
-    <title>{{ page_title }}</title>
-</head>
-</html>
+{% extends 'jt_portfolio/base.html' %}
+{% include 'nav.html' %}
+{% block  body %}
+    {% if articles %}
+        <section class="section extra-margins">
+            <h1 class="section-heading">Articles</h1>
+            {% for article in articles %}
+            {# <p class="section-description"> Need to put in a blog description blurb here. </p>#}
+            <div class="row">
+                <div class="col-md-12 mb-r">
+                    {# Section below will be used to handle tags#}
+                    {# <a href="" class="pink-text"><h5><i class="fa fa-heart"></i>Lifestyle</h5></a>#}
+                    <h4>{{ article.title }}</h4>
+                    <p>{{ article.body }}</p>
+                    <p>by <a><strong>{{ article.profile }}</strong></a>, {{ article.date_created }}</p>
+                    <a class="btn btn-primary">Read more</a> {# need to add jquery here for article expansion logic #}
+                </div>
+            </div>
+            <hr>
+            {% endfor %}
+        </section>
+    {% endif %}
+{% endblock %}
