@@ -1,4 +1,36 @@
-{% extends "base.html" %}
-
 {% block nav %}
+<nav class="navbar navbar-toggleable-md navbar-dark black">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <strong>jeff torres</strong>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav1">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Projects</a>
+                </li>
+                <div class="d-flex align-items-lg-center">
+                    <a class="nav-link icons-sm li-ic" href="https://www.linkedin.com/in/jeffreyntorres" target="_blank"><i class="fa fa-linkedin"> </i></a>
+                    <a class="nav-link icons-sm git-ic" href="https://github.com/ilikesounds" target="_blank"><i class="fa fa-github"> </i></a>
+                    <a class="nav-link icons-sm email-ic" href="mailto:jeffrey.n.torres@gmail.com"><i class="fa fa-envelope-o"> </i></a>
+                </div>
+            </ul>
+            <form class="form-inline waves-effect waves-dark">
+                <input class="form-control" type="text" placeholder="Search">
+            </form>
+        </div>
+    </div>
+</nav>
 {% endblock %}
