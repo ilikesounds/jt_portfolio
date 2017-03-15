@@ -89,4 +89,4 @@ ENV/
 .ropeproject
 
 #Static File Assets
-staticfiles/
+staticfiles
