@@ -1,6 +1,6 @@
-from django.shortcuts import redirect
+from django.views.generic import TemplateView
 
 
-def redirect_home(request):
+class Home(TemplateView):
 
-    return redirect('/blog')
+    template_name = 'jt_portfolio/home.html'
