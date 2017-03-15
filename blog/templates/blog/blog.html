@@ -1,0 +1,24 @@
+{% extends 'jt_portfolio/base.html' %}
+{% block  body %}
+<section class="section extra-margins">
+    <h1 class="section-heading">Articles</h1>
+    {# <p class="section-description"> Need to put in a blog description blurb here. </p>#}
+    {% if articles %}
+            {% for article in articles %}
+            <div class="row">
+                <div class="col-md-12 mb-r">
+                    {# Section below will be used to handle tags#}
+                    {# <a href="" class="pink-text"><h5><i class="fa fa-heart"></i>Lifestyle</h5></a>#}
+                    <h4>{{ article.title }}</h4>
+                    <p>{{ article.body }}</p>
+                    <p>by <a><strong>{{ article.profile }}</strong></a>, {{ article.date_created }} UTC</p>
+                    <a class="btn-flat waves-effect" href="{% url 'blog_detail' article.slug %}">Read more</a> {# need to add jquery here for article expansion logic #}
+                </div>
+            </div>
+            <hr>
+            {% endfor %}
+    {% else %}
+    <p>There are no articles to display at this time.</p>
+    {% endif %}
+</section>
+{% endblock %}

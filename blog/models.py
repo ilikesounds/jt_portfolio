@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
-from django.conf import settings
+from aboutme.models import Profile
 # from django.utils.text import slugify
 
 
@@ -11,18 +11,17 @@ class Blog(models.Model):
     This model establishes the structure of the blog article for jt_portfolio.
     """
 
-    PRIVATE, SHARED, PUBLIC = 'Pri', 'Shr', 'Pub'
+    profile = models.ForeignKey(
+        Profile,
+        on_delete=models.CASCADE,
+        related_name='blog',
+    )
+
+    PRIVATE, PUBLIC = 'Prv', 'Pub'
 
     PUBLISHED_CHOICES = (
         (PRIVATE, 'Private'),
-        (SHARED, 'Shared'),
         (PUBLIC, 'Public')
-    )
-
-    author = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-        related_name='author'
     )
 
     title = models.CharField('Title',
@@ -49,3 +48,12 @@ class Blog(models.Model):
 
         blog = str(self.title)
         return blog
+
+
+class BlogManager(models.Manager):
+    def get_queryset(self):
+        queryset = super(BlogManager, self).get_queryset().filter(
+            published_status='Pub'
+            )
+        queryset = queryset.order_by('-date_created')
+        return queryset

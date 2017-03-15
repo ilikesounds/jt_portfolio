@@ -1,6 +1,12 @@
 from django.conf.urls import url
-from .views import home_view
+from .views import BlogListView, BlogDetailView
 
 urlpatterns = [
-    url(r'^$', home_view, name='home_view'),
-]
+    url(r'^$',
+        BlogListView.as_view(),
+        name='blog'),
+    url(r'^detail/(?P<slug>[A-Za-z0-9-]*)/$',
+        BlogDetailView.as_view(),
+        name='blog_detail'
+        ),
+    ]
