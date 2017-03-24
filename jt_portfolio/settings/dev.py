@@ -1,5 +1,5 @@
 import os
-from settings.base import *
+from jt_portfolio.settings.base import *
 
 
 DEBUG = True
