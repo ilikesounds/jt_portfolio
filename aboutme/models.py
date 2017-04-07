@@ -99,4 +99,3 @@ class Skills(models.Model):
     skill_name = models.CharField('skill name', max_length=16)
     skill_description = models.TextField('skill description')
     skill_strength = models.IntegerField('skill_strength')
-    
