@@ -81,3 +81,22 @@ class Edu(models.Model):
     date_end = models.DateField('end date')
     short_desc = models.CharField('short description', max_length=128)
     description = models.TextField('description')
+
+
+class Skills(models.Model):
+    """
+    This models establishes the structure of Skills model.
+    """
+
+    def __str__(self):
+        """
+        This will display in string format the name of the Skill
+        """
+
+        return str(self.name)
+
+    skill_type = models.CharField('skill type', max_length=16)
+    skill_name = models.CharField('skill name', max_length=16)
+    skill_description = models.TextField('skill description')
+    skill_strength = models.IntegerField('skill_strength')
+    
