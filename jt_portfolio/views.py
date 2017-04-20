@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView
-from jt_portfolio.about_me.models import Skills
+from aboutme.models import Skills
 
 
 class Home(TemplateView):
