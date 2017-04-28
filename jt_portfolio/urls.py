@@ -12,6 +12,7 @@ urlpatterns = [
     url(r'^$', Home.as_view(), name='home'),
     url(r'^admin/', admin.site.urls),
     url(r'^blog/', include('blog.urls')),
+    url(r'^bcr/$', Home.as_view())
 ]
 
 # url(r'^resume/', include('aboutme.urls')),
