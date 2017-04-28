@@ -2,14 +2,14 @@
 {% load static %}
 
 {% block splash %}
-<div class="view intro color-block elegant-color" id="home" style="background-image:url('img/img (11).jpg')">
+<div class="view intro color-block teal" id="home">
   <div class="full-bg-img flex-center">
     <div class="container">
 
       <div class="white-text text-center">
         <h2 class="intro-heading wow fadeIn">I'm Jeff Torres</h2>
         <h3 class="intro-subtext wow fadeIn" data-wow-delay="0.2s">and I'm a web developer who loves Python.</h3>
-        <li class="smooth-scroll wow fadeIn" data-wow-delay="0.4s"><a href="#about" class="btn btn-floating btn-large btn-primary wow fadeIn" data-wow-delay="0.4s"><i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+        <li class="smooth-scroll wow fadeIn" data-wow-delay="0.4s"><a href="#about" class="btn-floating btn-large grey wow fadeIn" data-wow-delay="0.4s"><i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
       </div>
 
     </div>
@@ -26,7 +26,7 @@
 
       <!-- Headshot -->
       <div class="col-lg-4 mb-2">
-        <img src="{% static '/profile_01.jpg' %}" alt="My photo">
+        <img src="{% static '/profile_01.jpg' %}" alt="Jeff Torres Profile Picture">
       </div>
 
       <!-- Text content -->
@@ -60,7 +60,7 @@
     <!-- First row -->
     <div class="row features-big wow fadeIn" data-wow-delay="0.4s">
       <div class="col-md-12 col-lg-4 mb-2">
-        <i class="fa fa-wrench indigo-text" aria-hidden="true"></i>
+        <i class="fa fa-wrench teal-text" aria-hidden="true"></i>
         <h4 class="feature-title">Development</h4>
         <ul class="list-group z-depth-0 skills-table">
           <li class="list-group-item">HTML5/CSS3</li>
@@ -74,7 +74,7 @@
       </div>
 
       <div class="col-md-12 col-lg-4 mb-2">
-        <i class="fa fa-paint-brush indigo-text" aria-hidden="true"></i>
+        <i class="fa fa-paint-brush teal-text" aria-hidden="true"></i>
         <h4 class="feature-title">Design</h4>
         <ul class="list-group z-depth-0 skills-table">
           <li class="list-group-item">Adobe Photoshop</li>
@@ -88,7 +88,7 @@
       </div>
 
       <div class="col-md-12 col-lg-4 mb-2">
-        <i class="fa fa-star indigo-text" aria-hidden="true"></i>
+        <i class="fa fa-star teal-text" aria-hidden="true"></i>
         <h4 class="feature-title">Other</h4>
         <ul class="list-group z-depth-0 skills-table">
           <li class="list-group-item">Google Analytics</li>
@@ -218,7 +218,7 @@
   <li class="nav-item"><a class="nav-link" href="#home"><span></span></a></li>
   <li class="nav-item"><a class="nav-link" href="#about"><span></span></a></li>
   <li class="nav-item"><a class="nav-link" href="#skills"><span></span></a></li>
-  <li class="nav-item"><a class="nav-link" href="#works"><span></span></a></li>
+  {% comment %}<li class="nav-item"><a class="nav-link" href="#works"><span></span></a></li>{% endcomment %}
   <li class="nav-item"><a class="nav-link" href="#contact"><span></span></a></li>
 </ul>
 </div>
