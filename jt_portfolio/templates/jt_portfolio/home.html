@@ -5,43 +5,31 @@
 <div class="view intro color-block teal" id="home">
   <div class="full-bg-img flex-center">
     <div class="container">
-
       <div class="white-text text-center">
         <h2 class="intro-heading wow fadeIn">I'm Jeff Torres</h2>
         <h3 class="intro-subtext wow fadeIn" data-wow-delay="0.2s">and I'm a web developer who loves Python.</h3>
         <li class="smooth-scroll wow fadeIn" data-wow-delay="0.4s"><a href="#about" class="btn-floating btn-large grey wow fadeIn" data-wow-delay="0.4s"><i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
       </div>
-
     </div>
   </div>
 </div>
 {% endblock %}
 
 {% block body %}
-<!-- About Me Blurb -->
 <div class="container">
   <section id="about" class="section pt-3 pb-4">
     <h1 class="section-heading wow fadeIn">About me</h1>
     <div class="row wow fadeIn" data-wow-delay="0.2s">
-
-      <!-- Headshot -->
       <div class="col-lg-4 mb-2">
         <img src="{% static '/profile_01.jpg' %}" alt="Jeff Torres Profile Picture">
       </div>
-
-      <!-- Text content -->
       <div class="col-lg-8">
-        <p class="lead">I'm a freelance web developer with 8+ years of experience, based in San Francisco</p>
-        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo animi soluta ratione quisquam, dicta ab cupiditate iure eaque? Repellendus voluptatum, magni impedit eaque delectus, beatae maxime temporibus maiores quibusdam quasi.</span><span>Rem magnam ad perferendis iusto sint tempora ea voluptatibus iure, animi excepturi modi aut possimus in hic molestias repellendus illo ullam odit quia velit. Qui expedita sit quo, maxime molestiae.</span></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi sapiente, consequuntur dolore praesentium non suscipit minus repudiandae, nesciunt placeat, vel nostrum magni pariatur accusantium laudantium.</p>
+        <p class="lead">I'm a newly minted developer based in Seattle looking for new and exciting opportunities.</p>
+        <p>I’m a full-stack developer who is most comfortable utilizing Python, but able to quickly learn and utilize new languages. My prior experience as an IT support professional coupled with a detailed understanding of customer service and its unique challenges leaves me well suited to develop solutions that clients can effectively use and understand.</p>
       </div>
-
     </div>
   </section>
 </div>
-<!-- /.First container -->
-
-<!-- streak -->
 <div class="streak streak-lg">
 <div class="flex-center">
   <ul>
@@ -50,78 +38,57 @@
   </ul>
 </div>
 </div>
-
-<!-- Skills Section -->
 <div class="container">
   <section id="skills" class="section feature-box pt-3 mb-4">
     <h1 class="section-heading wow fadeIn">My skills</h1>
+    {% comment %}
     <p class="section-description wow fadeIn" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet maiores aspernatur aut animi debitis. Ad excepturi dolor tempora at aperiam earum veritatis ullam. Culpa tempora possimus necessitatibus excepturi, quisquam officia.</p>
-
-    <!-- First row -->
+    {% endcomment %}
     <div class="row features-big wow fadeIn" data-wow-delay="0.4s">
       <div class="col-md-12 col-lg-4 mb-2">
-        <i class="fa fa-wrench teal-text" aria-hidden="true"></i>
-        <h4 class="feature-title">Development</h4>
+        <i class="fa fa-code teal-text" aria-hidden="true"></i>
+        <h4 class="feature-title">Languages</h4>
         <ul class="list-group z-depth-0 skills-table">
-          <li class="list-group-item">HTML5/CSS3</li>
-          <li class="list-group-item">Sass/Less</li>
+          <li class="list-group-item">Python 2/3</li>
+          <li class="list-group-item">HTML5</li>
+          <li class="list-group-item">CSS3</li>
           <li class="list-group-item">JavaScript</li>
-          <li class="list-group-item">AngularJS</li>
-          <li class="list-group-item">React</li>
+          <li class="list-group-item">PostgreSQL</li>
+        </ul>
+      </div>
+      <div class="col-md-12 col-lg-4 mb-2">
+        <i class="fa fa-cogs teal-text" aria-hidden="true"></i>
+        <h4 class="feature-title">Frameworks</h4>
+        <ul class="list-group z-depth-0 skills-table">
+          <li class="list-group-item">Django</li>
+          <li class="list-group-item">Pylons/Pyramid</li>
+          <li class="list-group-item">Bootstrap 3/4</li>
           <li class="list-group-item">jQuery</li>
-          <li class="list-group-item">PHP</li>
         </ul>
       </div>
-
       <div class="col-md-12 col-lg-4 mb-2">
-        <i class="fa fa-paint-brush teal-text" aria-hidden="true"></i>
-        <h4 class="feature-title">Design</h4>
+        <i class="fa fa-cloud-upload teal-text" aria-hidden="true"></i>
+        <h4 class="feature-title">Deployment</h4>
         <ul class="list-group z-depth-0 skills-table">
-          <li class="list-group-item">Adobe Photoshop</li>
-          <li class="list-group-item">Adobe Illustrator</li>
-          <li class="list-group-item">Gimp</li>
-          <li class="list-group-item">Adobe Premiere</li>
-          <li class="list-group-item">Material Design</li>
-          <li class="list-group-item">Responsive Web Design</li>
-          <li class="list-group-item">UI/UX Design</li>
-        </ul>
-      </div>
-
-      <div class="col-md-12 col-lg-4 mb-2">
-        <i class="fa fa-star teal-text" aria-hidden="true"></i>
-        <h4 class="feature-title">Other</h4>
-        <ul class="list-group z-depth-0 skills-table">
-          <li class="list-group-item">Google Analytics</li>
-          <li class="list-group-item">Marketing Automation</li>
-          <li class="list-group-item">Brandflow</li>
-          <li class="list-group-item">Google Tag Manager</li>
-          <li class="list-group-item">SEO Optimization</li>
+          <li class="list-group-item">AWS</li>
+          <li class="list-group-item">Ansible</li>
+          <li class="list-group-item">Git</li>
+          <li class="list-group-item">Heroku</li>
+          <li class="list-group-item">GitHub</li>
           <li class="list-group-item">Linux</li>
-          <li class="list-group-item">Git/Svn</li>
         </ul>
       </div>
-
     </div>
   </section>
-
+  {% comment %}
   <hr class="between-sections">
-
-  <!-- Contact -->
   <section id="contact" class="section mb-4">
-
-    <!--Section heading-->
     <h1 class="section-heading wow fadeIn">Contact me</h1>
-    <!--Section sescription-->
     <p class="section-description m-b-5 wow fadeIn" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam. Quia, minima?</p>
-
     <div class="row wow fadeIn" data-wow-delay="0.4s">
-
-      <!--First column-->
       <div class="col-md-8 mb-r">
         <form>
-          <!--First row-->
           <div class="row">
-            <!--First column-->
             <div class="col-md-6">
               <div class="md-form">
                 <div class="md-form">
@@ -130,8 +97,6 @@
                 </div>
               </div>
             </div>
-
-            <!--Second column-->
             <div class="col-md-6">
               <div class="md-form">
                 <div class="md-form">
@@ -141,9 +106,6 @@
               </div>
             </div>
           </div>
-          <!--/.First row-->
-
-          <!--Second row-->
           <div class="row">
             <div class="col-md-12">
               <div class="md-form">
@@ -152,52 +114,33 @@
               </div>
             </div>
           </div>
-          <!--/Second row-->
-
-          <!--Third row-->
           <div class="row">
-            <!--First column-->
             <div class="col-md-12">
-
               <div class="md-form">
                 <textarea type="text" id="form76" class="md-textarea"></textarea>
                 <label for="form76">Your message</label>
               </div>
-
             </div>
           </div>
-          <!--/.Third row-->
         </form>
-
         <div class="center-on-small-only">
           <a class="btn btn-primary">Send</a>
         </div>
       </div>
-      <!--.First column-->
-
-      <!--Second column-->
       <div class="col-md-4">
         <ul class="contact-icons">
           <li><i class="fa fa-map-marker fa-2x"></i>
             <p>Seattle, WA 98103, USA</p>
           </li>
-
           <li><i class="fa fa-envelope fa-2x"></i>
             <p>jeffrey.n.torres@gmail.com</p>
           </li>
         </ul>
       </div>
-      <!--.Second column-->
-
     </div>
   </section>
-  <!--/Section: Contact v.2-->
-
+  {% endcomment %}
 </div>
-<!-- /.Second container -->
-
-<!-- Customers carousel -->
-
 <div class="streak">
   <div class="flex-center">
     <ul>
@@ -206,37 +149,28 @@
     </ul>
   </div>
 </div>
-
-<!-- /.Customers carousel -->
-
 </main>
-<!--/Main layout-->
-
-<!-- Scrollspy -->
 <div class="dotted-scrollspy hidden-sm-down">
 <ul class="nav smooth-scroll flex-column">
   <li class="nav-item"><a class="nav-link" href="#home"><span></span></a></li>
   <li class="nav-item"><a class="nav-link" href="#about"><span></span></a></li>
   <li class="nav-item"><a class="nav-link" href="#skills"><span></span></a></li>
-  {% comment %}<li class="nav-item"><a class="nav-link" href="#works"><span></span></a></li>{% endcomment %}
+  {% comment %}
+  <li class="nav-item"><a class="nav-link" href="#works"><span></span></a></li>
   <li class="nav-item"><a class="nav-link" href="#contact"><span></span></a></li>
+  {% endcomment %}
 </ul>
 </div>
-
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="{% static '/tether.min.js' %}"></script>
 <script type="text/javascript" src="{% static '/bootstrap.min.js' %}"></script>
 <script type="text/javascript" src="{% static '/mdb.min.js' %}"></script>
 <script src="https://use.fontawesome.com/a0423217b5.js"></script>
 <script>
-// initialize scrollspy
 $('body').scrollspy({
   target: '.dotted-scrollspy'
 });
-
-/* WOW.js init */
 new WOW().init();
-
 </script>
 
 {% endblock %}
