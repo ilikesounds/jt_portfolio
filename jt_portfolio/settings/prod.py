@@ -3,7 +3,7 @@ import dj_database_url
 from jt_portfolio.settings.base import *
 
 
-DEBUG = False
+DEBUG = True
 
 DATABASES = {
     'default': {
