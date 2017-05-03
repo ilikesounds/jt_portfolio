@@ -5,6 +5,8 @@ from jt_portfolio.settings.base import *
 
 DEBUG = False
 
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
 DATABASES = {
     'default': {
         'ENGINE': dj_database_url.config(
