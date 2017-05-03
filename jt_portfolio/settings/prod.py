@@ -38,31 +38,31 @@ LOGGING = {
     'formatters': {
         'verbose': {
             'format': '%(levelname)s [%(asctime)s] %(module)s %(message)s'
-        }
-    },
+            },
+        },
     'handlers': {
         'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
-            'formatter': 'simple',
+            'formatter': 'simple'
+            },
+        'file': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'formatter': 'verbose',
+            'filename': '/logs/jtp.log',
+            'maxBytes': 1024000,
+            'backupCount': 3,
+            },
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler'
+            }
         },
-    },
-    'file': {
-        'class': 'logging.handlers.RotatingFileHandler',
-        'formatter': 'verbose',
-        'filename': '/logs/jtp.log',
-        'maxBytes': 1024000,
-        'backupCount': 3,
-        },
-    'mail_admins': {
-        'level': 'ERROR',
-        'class': 'django.utils.log.AdminEmailHandler'
-    },
     'loggers': {
         'django': {
             'handlers': ['file', 'console', 'mail_admins'],
             'propagate': True,
             'level': 'DEBUG',
             },
-        },
-    },
+        }
+    }
