@@ -3,9 +3,7 @@
 <html lang="en" class="full-height">
   <head>
     {% include 'jt_portfolio/meta.html' %}
-    <link rel="stylesheet" href="{% static '/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static '/mdb.min.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    {% include 'jt_portfolio/css.html' %}
   </head>
   <body class="intro-page">
     <header>
@@ -17,9 +15,7 @@
       {% block body %}
       {% endblock %}
     </main>
-    <footer>
-      {% block footer %}
-      {% endblock %}
-    </footer>
+    {% include 'jt_portfolio/footer.html' %}
+    {% include 'jt_portfolio/js.html' %}
   </body>
 </html>

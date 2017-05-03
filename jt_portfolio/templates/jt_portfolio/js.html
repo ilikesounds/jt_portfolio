@@ -1,0 +1,17 @@
+{% load static %}
+<script type="text/javascript" src="{% static '/jquery-3.1.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static '/tether.min.js' %}"></script>
+<script type="text/javascript" src="{% static '/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static '/mdb.min.js' %}"></script>
+<script src="https://use.fontawesome.com/a0423217b5.js"></script>
+<script>
+$('body').scrollspy({
+  target: '.dotted-scrollspy'
+});
+
+$('#collapseEx a').click(function(e) {
+  $('#collapseEx').collapse('hide');
+});
+
+new WOW().init();
+</script>
