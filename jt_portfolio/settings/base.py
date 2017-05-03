@@ -8,6 +8,8 @@ import os
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 # Application definition
 
 INSTALLED_APPS = [

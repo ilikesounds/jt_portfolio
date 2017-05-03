@@ -3,8 +3,6 @@ from jt_portfolio.settings.base import *
 
 DEBUG = True
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 ALLOWED_HOSTS = []
 
 DATABASES = {
