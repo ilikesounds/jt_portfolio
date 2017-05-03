@@ -44,7 +44,6 @@ LOGGING = {
         'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
-            'formatter': 'simple'
             },
         'file': {
             'class': 'logging.handlers.RotatingFileHandler',
