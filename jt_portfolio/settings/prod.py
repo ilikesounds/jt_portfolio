@@ -48,7 +48,7 @@ LOGGING = {
         'file': {
             'class': 'logging.handlers.RotatingFileHandler',
             'formatter': 'verbose',
-            'filename': '/logs/jtp.log',
+            'filename': './logs/jtp.log',
             'maxBytes': 1024000,
             'backupCount': 3,
             },
